@@ -26,6 +26,9 @@ jobs:
      run: |
       mvn clean
       mvn -B package --file pom.xml
+   - name: use the generated Artifact
+     run: |
+       ls ./targrt/
 
    - name: Build Docker Image
      uses: docker/build-push-action@v2
