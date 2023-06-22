@@ -1,4 +1,4 @@
-name: Build the Java Application
+name: Code Analysis
 
 on:
  push:
@@ -9,7 +9,6 @@ jobs:
 
  sonarqube:
   runs-on: self-hosted
-  needs: build-deploy
   steps:
       - uses: actions/checkout@v2
         with:
