@@ -1,4 +1,4 @@
-name: Build and Deploy Java Application
+name: Code Analysis Using SonarQube
 
 on:
  push:
