@@ -24,6 +24,13 @@ jobs:
 
    - name: Build the Application
      run: mvn clean package
+     
+   - name: SonarQube Scan
+     uses: kitabisa/sonarqube-action@v1.2.0
+     with:
+      host: ${{ secrets.SONAR_HOST_URL }}
+      login: ${{ secrets.SONAR_TOKEN }}
+      projectKey: spring-boot-app
 
    - name: Login to DockerHub
      uses: docker/login-action@v2
