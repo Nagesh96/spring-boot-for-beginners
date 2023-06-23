@@ -26,8 +26,8 @@ jobs:
      run: mvn clean package
      
    - name: SonarQube Scan
-     uses: sonarsource/sonarqube-scan-action@master
-     env:
+     uses: vtex/action-sonarqube@main
+     with:
       host: ${{ secrets.SONAR_HOST_URL }}
       login: ${{ secrets.SONAR_TOKEN }}
       projectKey: spring-boot-app
