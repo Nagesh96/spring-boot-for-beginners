@@ -26,7 +26,7 @@ jobs:
      run: mvn clean package
      
    - name: SonarQube Scan
-     uses: kitabisa/sonarqube-action@v1.2.0
+     uses: sonarsource/sonarqube-scan-action@master
      with:
       host: ${{ secrets.SONAR_HOST_URL }}
       login: ${{ secrets.SONAR_TOKEN }}
