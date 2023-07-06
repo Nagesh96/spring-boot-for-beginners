@@ -25,14 +25,3 @@ jobs:
    - name: Build the Application
      run: mvn clean package
      
-   - name: Code Analysis
-     uses: actions/checkout@master
-     with:
-        # Disabling shallow clone is recommended for improving relevancy of reporting
-      fetch-depth: 0
-   - name: SonarQube Scan
-     uses: kitabisa/sonarqube-action@v1.2.0
-     with:
-      host: ${{ secrets.SONAR_HOST_URL }}
-      login: ${{ secrets.SONAR_TOKEN }}
-      projectKey: spring-boot-app
